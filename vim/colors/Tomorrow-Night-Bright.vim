@@ -4,19 +4,19 @@
 " Hex colour conversion functions borrowed from the theme "Desert256""
 
 " Default GUI Colours
-let s:foreground = "eaeaea"
-let s:background = "1f1f1f"
-let s:selection = "424242"
-let s:line = "2a2a2a"
-let s:comment = "969896"
-let s:red = "d54e53"
-let s:orange = "e78c45"
-let s:yellow = "e7c547"
-let s:green = "b9ca4a"
-let s:aqua = "70c0b1"
-let s:blue = "7aa6da"
-let s:purple = "c397d8"
-let s:window = "4d5057"
+let s:foreground = "eaeaea" " #eaeaea
+let s:background = "1f1f1f" " #1f1f1f
+let s:selection = "424242" " #424242
+let s:line = "2a2a2a" " #2a2a2a
+let s:comment = "969896" " #969896
+let s:red = "d54e53" " #d54e53
+let s:orange = "F68C26" " #F68C26
+let s:yellow = "e7c547" " #e7c547
+let s:green = "60d060" " #60d060
+let s:aqua = "2BEBFF" " #2BEBFF
+let s:blue = "3E79E5" " #3E79E5
+let s:purple = "8A53CC" " #8A53CC
+let s:window = "4d5057" " #4d5057
 
 hi clear
 syntax reset
@@ -278,7 +278,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("PreProc", s:purple, "", "")
 	call <SID>X("Operator", s:aqua, "", "none")
 	call <SID>X("Type", s:blue, "", "none")
-	call <SID>X("Define", s:purple, "", "none")
+	call <SID>X("Define", s:red, "", "none")
 	call <SID>X("Include", s:blue, "", "")
 	"call <SID>X("Ignore", "666666", "", "")
 
@@ -300,7 +300,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("phpMemberSelector", s:foreground, "", "")
 
 	" Ruby Highlighting
-	call <SID>X("rubySymbol", s:green, "", "")
+	call <SID>X("rubySymbol", s:purple, "", "")
 	call <SID>X("rubyConstant", s:yellow, "", "")
 	call <SID>X("rubyAccess", s:yellow, "", "")
 	call <SID>X("rubyAttribute", s:blue, "", "")
@@ -311,7 +311,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("rubyInterpolationDelimiter", s:orange, "", "")
 	call <SID>X("rubyConditional", s:purple, "", "")
 	call <SID>X("rubyRepeat", s:purple, "", "")
-	call <SID>X("rubyControl", s:purple, "", "")
+	call <SID>X("rubyControl", s:red, "", "")
 	call <SID>X("rubyException", s:purple, "", "")
 
 	" Python Highlighting
@@ -326,15 +326,26 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("pythonExClass", s:orange, "", "")
 
 	" JavaScript Highlighting
-	call <SID>X("javaScriptBraces", s:foreground, "", "")
-	call <SID>X("javaScriptFunction", s:purple, "", "")
-	call <SID>X("javaScriptConditional", s:purple, "", "")
-	call <SID>X("javaScriptRepeat", s:purple, "", "")
-	call <SID>X("javaScriptNumber", s:orange, "", "")
-	call <SID>X("javaScriptMember", s:orange, "", "")
-	call <SID>X("javascriptNull", s:orange, "", "")
-	call <SID>X("javascriptGlobal", s:blue, "", "")
-	call <SID>X("javascriptStatement", s:red, "", "")
+	call <SID>X("jsStorageClass", s:red, "", "")
+	call <SID>X("jsOperator", s:red, "", "")
+	call <SID>X("jsFunction", s:purple, "", "")
+	call <SID>X("jsFuncArgs", s:yellow, "", "")
+	call <SID>X("jsFuncArgCommas", s:yellow, "", "")
+	call <SID>X("jsFuncArgRest", s:yellow, "", "")
+	call <SID>X("jsConditional", s:aqua, "", "")
+	call <SID>X("jsFuncCall", s:blue, "", "")
+	call <SID>X("jsObjectKey", s:aqua, "", "")
+	call <SID>X("jsFunctionKey", s:yellow, "", "")
+	call <SID>X("jsNull", s:orange, "", "")
+	call <SID>X("jsThis", s:yellow, "", "")
+	call <SID>X("jsReturn", s:yellow, "", "")
+	call <SID>X("jsUndefined", s:orange, "", "")
+	call <SID>X("jsNan", s:orange, "", "")
+	call <SID>X("jsPrototype", s:yellow, "", "")
+	call <SID>X("jsStatement", s:red, "", "")
+	call <SID>X("jsRepeat", s:aqua, "", "")
+	call <SID>X("jsGlobalObjects", s:yellow, "", "")
+	call <SID>X("jsHtmlElements", s:aqua, "", "")
 
         " CoffeeScript Highlighting
         call <SID>X("coffeeRepeat", s:purple, "", "")
@@ -386,26 +397,26 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("clojureConstant", s:orange, "", "")
 	call <SID>X("clojureBoolean", s:orange, "", "")
 	call <SID>X("clojureCharacter", s:orange, "", "")
-	call <SID>X("clojureKeyword", s:green, "", "")
+	call <SID>X("clojureKeyword", s:purple, "", "")
 	call <SID>X("clojureNumber", s:orange, "", "")
 	call <SID>X("clojureString", s:green, "", "")
-	call <SID>X("clojureRegexp", s:green, "", "")
+	call <SID>X("clojureRegexp", s:yellow, "", "")
 	call <SID>X("clojureParen", s:aqua, "", "")
 	call <SID>X("clojureVariable", s:yellow, "", "")
-	call <SID>X("clojureCond", s:blue, "", "")
-	call <SID>X("clojureDefine", s:purple, "", "")
+	call <SID>X("clojureCond", s:aqua, "", "")
+	call <SID>X("clojureDefine", s:red, "", "")
 	call <SID>X("clojureException", s:red, "", "")
 	call <SID>X("clojureFunc", s:blue, "", "")
-	call <SID>X("clojureMacro", s:blue, "", "")
+	call <SID>X("clojureMacro", s:aqua, "", "")
 	call <SID>X("clojureRepeat", s:blue, "", "")
-	call <SID>X("clojureSpecial", s:purple, "", "")
-	call <SID>X("clojureQuote", s:blue, "", "")
-	call <SID>X("clojureUnquote", s:blue, "", "")
-	call <SID>X("clojureMeta", s:blue, "", "")
+	call <SID>X("clojureSpecial", s:red, "", "")
+	call <SID>X("clojureQuote", s:aqua, "", "")
+	call <SID>X("clojureUnquote", s:aqua, "", "")
+	call <SID>X("clojureMeta", s:yellow, "", "")
 	call <SID>X("clojureDeref", s:blue, "", "")
-	call <SID>X("clojureAnonArg", s:blue, "", "")
+	call <SID>X("clojureAnonArg", s:aqua, "", "")
 	call <SID>X("clojureRepeat", s:blue, "", "")
-	call <SID>X("clojureDispatch", s:blue, "", "")
+	call <SID>X("clojureDispatch", s:aqua, "", "")
 
 	" Scala "highlighting
 	call <SID>X("scalaKeyword", s:purple, "", "")
