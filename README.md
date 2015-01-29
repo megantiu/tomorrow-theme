@@ -1,3 +1,12 @@
+# My fork of the Tomorrow Theme
+
+I modified the tomorrow-night-bright theme slightly (only the vim theme) to fit my liking a bit better.
+
+Here are some screenshots for JavaScript and Ruby (Both use the Droid Sans Mono font):
+
+![JavaScript Code](https://github.com/ksmithbaylor/tomorrow-theme/raw/master/Images/Kevin-Javascript.png)
+![Ruby Code](https://github.com/ksmithbaylor/tomorrow-theme/raw/master/Images/Kevin-Ruby.png)
+
 # Tomorrow Theme
 
 [![Flattr this](http://api.flattr.com/button/flattr-badge-large.png)](http://flattr.com/thing/814991/chriskempsontomorrow-theme-on-GitHub)
@@ -126,4 +135,3 @@ Released under the [MIT License](https://github.com/chriskempson/tomorrow-theme/
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/chriskempson/tomorrow-theme/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
