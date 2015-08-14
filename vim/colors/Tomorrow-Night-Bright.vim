@@ -222,10 +222,18 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	" Sets the highlighting for the given group
 	fun <SID>X(group, fg, bg, attr)
 		if a:fg != ""
-			exec "hi " . a:group . " guifg=#" . a:fg . " ctermfg=" . <SID>rgb(a:fg)
+            if type(a:fg) == type("")
+                exec "hi " . a:group . " guifg=#" . a:fg . " ctermfg=" . <SID>rgb(a:fg)
+            else
+                exec "hi " . a:group . " guifg=#" . a:fg . " ctermfg=" . a:fg
+            endif
 		endif
 		if a:bg != ""
-			exec "hi " . a:group . " guibg=#" . a:bg . " ctermbg=" . <SID>rgb(a:bg)
+            if type(a:bg) == type("")
+                exec "hi " . a:group . " guibg=#" . a:bg . " ctermbg=" . <SID>rgb(a:bg)
+            else
+                exec "hi " . a:group . " guibg=#" . a:bg . " ctermbg=" . a:bg
+            endif
 		endif
 		if a:attr != ""
 			exec "hi " . a:group . " gui=" . a:attr . " cterm=" . a:attr
