@@ -4,19 +4,20 @@
 " Hex colour conversion functions borrowed from the theme "Desert256""
 
 " Default GUI Colours
-let s:foreground = "eaeaea" " #eaeaea
-let s:background = "1f1f1f" " #1f1f1f
-let s:selection = "424242" " #424242
-let s:line = "2a2a2a" " #2a2a2a
-let s:comment = "969896" " #969896
-let s:red = "d54e53" " #d54e53
-let s:orange = "F68C26" " #F68C26
-let s:yellow = "e7c547" " #e7c547
-let s:green = "60d060" " #60d060
-let s:aqua = "2BEBFF" " #2BEBFF
-let s:blue = "3E79E5" " #3E79E5
-let s:purple = "8A53CC" " #8A53CC
-let s:window = "4d5057" " #4d5057
+let s:background = "262626" " #262626
+let s:line = "303030" " #303030
+let s:selection = "3a3a3a" " #3a3a3a
+let s:linenumber = "444444" " #444444
+let s:comment = "626262" " #626262
+let s:window = "767676" " #767676
+let s:foreground = "dadada" " #dadada
+let s:red = "ff5f5f" " #ff5f5f
+let s:orange = "ff8700" " #ff8700
+let s:yellow = "d7ff00" " #d7ff00
+let s:green = "5fff5f" " #5fff5f
+let s:aqua = "00ffff" " #00ffff
+let s:blue = "0087ff" " #0079fa
+let s:purple = "8700ff" " #8700ff
 
 hi clear
 syntax reset
@@ -233,7 +234,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 
 	" Vim Highlighting
 	call <SID>X("Normal", s:foreground, s:background, "")
-	call <SID>X("LineNr", s:selection, "", "")
+	call <SID>X("LineNr", s:linenumber, "", "")
 	call <SID>X("NonText", s:selection, "", "")
 	call <SID>X("SpecialKey", s:selection, "", "")
 	call <SID>X("Search", s:background, s:yellow, "")
