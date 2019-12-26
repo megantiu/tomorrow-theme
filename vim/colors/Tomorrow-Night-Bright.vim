@@ -4,11 +4,11 @@
 " Hex colour conversion functions borrowed from the theme "Desert256""
 
 " Default GUI Colours
-let s:background = "262626" " #262626
+let s:background = "42264d" " #42264d
 let s:line = "303030" " #303030
 let s:selection = "3a3a3a" " #3a3a3a
-let s:linenumber = "444444" " #444444
-let s:comment = "626262" " #626262
+let s:linenumber = "969696" " #969696
+let s:comment = "969696" " #969696
 let s:window = "767676" " #767676
 let s:foreground = "dadada" " #dadada
 let s:red = "ff5f5f" " #ff5f5f
@@ -17,7 +17,7 @@ let s:yellow = "d7ff00" " #d7ff00
 let s:green = "5fff5f" " #5fff5f
 let s:aqua = "00ffff" " #00ffff
 let s:blue = "0087ff" " #0079fa
-let s:purple = "8700ff" " #8700ff
+let s:purple = "bc70ff" " #bc70ff
 
 hi clear
 syntax reset
